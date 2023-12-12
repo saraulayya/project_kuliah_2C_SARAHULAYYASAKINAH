@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand navbar-dark sticky-top" style="background-color: #C71585;">
+<nav class="navbar navbar-expand navbar-dark sticky-top" style="background-color:#B03060;">
         <div class="container-lg">
             <a class="navbar-brand" href="."><i class="bi bi-heart-pulse"></i>
                 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css"> Mobile Reference 
