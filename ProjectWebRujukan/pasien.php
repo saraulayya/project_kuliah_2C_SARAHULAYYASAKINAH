@@ -110,7 +110,7 @@ while ($record = mysqli_fetch_array($query)) {
                                         </div>
                                         <div class="col-lg-6">
                                             <div class="form-floating mb-3">
-                                                <input disabled type="email" class="form-control" id="floatingInput" placeholder="Keluhan" name="Keluhan/Penyakit" value="<?php echo $row['keluhan'] ?>">
+                                                <input disabled type="text" class="form-control" id="floatingInput" placeholder="Keluhan" name="keluhan" value="<?php echo $row['keluhan'] ?>">
                                                 <label for="floatingInput">Keluhan/Penyakit</label>
                                                 <div class="invalid-feedback">
                                                     Masukan Keluhan/Penyakit.
@@ -263,7 +263,6 @@ while ($record = mysqli_fetch_array($query)) {
                             <tr>
                                 <th scope="row"><?php echo $no++ ?></th>
                                 <td><?php echo $row['nama_pasien'] ?></td>
-                                <td><?php echo $row['tipe_pasien'] ?></td>
                                 <td><?php
                                     if ($row['tipe_pasien'] == 1) {
                                         echo "Rawat Inap";
@@ -271,7 +270,8 @@ while ($record = mysqli_fetch_array($query)) {
                                         echo "Rawat Jalan";
                                     }
                                     ?></td>
-                                <td><?php echo $row['nohp'] ?></td>
+                                <td><?php echo $row['keluhan'] ?></td>
+                                <td><?php echo $row['asal_rujukan'] ?></td>
                                 <td class="d-flex">
                                     <button class="btn btn-info btn-sm me-1" data-bs-toggle="modal" data-bs-target="#ModalView<?php echo $row['id'] ?>"><i class="bi bi-eye"></i></button>
                                     <button class="btn btn-warning btn-sm me-1" data-bs-toggle="modal" data-bs-target="#ModalEdit<?php echo $row['id'] ?>"><i class="bi bi-pencil-square"></i></i></button>

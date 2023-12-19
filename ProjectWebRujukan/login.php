@@ -1,6 +1,6 @@
 <?php
     //session_start();
-    if(!empty ($_SESSION['username_decafe'])){
+    if(!empty ($_SESSION['username_rujukan'])){
         header('location:home');
     }
 ?>
@@ -13,7 +13,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.118.2">
-    <title>Mobile Reference- Aplikasi Rujukan Online</title>
+    <title>DeCafe - Apikasi Pemesanan Makanan Dan Minuman Cafe</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/sign-in/">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
@@ -103,42 +103,42 @@
     <link href="assets/css/login.css" rel="stylesheet">
 </head>
 
-<body class="d-flex align-items-center py-4 bg-body-tertiary">
+<body class="text-center">
 
+    <main class="form-signin w-100 m-auto">
+        <form class="needs-validation" novalidate action ="prosses/proses_login.php" method="POST">
+            <h1 class="h3 mb-3 fw-normal">Please Login</h1>
 
-    <main class="form-signin w-100 m-auto text-center">
-        <form class="needs-validation" novalidate>
-            <!--gambar-->
-            <i class="bi bi-heart-pulse-fill fs-1"></i>
-            <h1 class="h3 mb-3 fw-normal text-center">Please Login</h1>
-
-
-            <div class="form-floating text-center">
-                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" required>
+            <div class="form-floating">
+                <input name = "username" type="email" class="form-control" id="floatingInput" placeholder="name@example.com" required>
                 <label for="floatingInput">Email address</label>
                 <div class="invalid-feedback">
-                    Masukkan Email Yang Valid.
+                    Masukkan email yang valid.
                 </div>
             </div>
-            <div class="form-floating text-center">
-                <input type="password" class="form-control" id="floatingPassword" placeholder="Password" required>
+            <div class="form-floating">
+                <input name = "password" type="password" class="form-control" id="floatingPassword" 
+                placeholder="Password" required>
                 <label for="floatingPassword">Password</label>
                 <div class="invalid-feedback">
-                    Masukkan Password.
+                    Masukkan password.
                 </div>
             </div>
-
-            <div class="form-check text-center my-3">
-                <input class="form-check-input-center" type="checkbox" value="remember-me" id="flexCheckDefault">
-                <label class="form-check-label" for="flexCheckDefault">
-                    Remember me
+            <div class="checkbox mb-3">
+                <label>
+                    <input type="checkbox" value="remember-me"> Remember me
                 </label>
             </div>
-            <button class="btn btn-primary text-center w-100 py-2" type="submit" name="submit_validate" value="abc">Login</button>
-            <p class="mt-5 mb-3 text-center text-body-secondary">&copy; 2021 - <?php echo date("Y") ?></p>
+            <button class="w-100 btn btn-lg btn-success" type="submit" name="submit-validate" value="abc">Login</button>
+            <div>
+            Username : utama@utama.com
+            </div>
+            <div>
+            Password : password
+            </div>
+            <p class="mt-5 mb-3 text-muted">&copy; 2022 - <?php echo date("Y")?></p>
         </form>
     </main>
-    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         // Example starter JavaScript for disabling form submissions if there are invalid fields
         (() => {
@@ -158,8 +158,8 @@
                     form.classList.add('was-validated')
                 }, false)
             })
-        })() 
-        </script>
-        </body>
+        })()
+    </script>
+</body>
 
-        </html>
+</html>

@@ -1,8 +1,8 @@
 <style>
     .nav-link.active{
         background-color: #B03060 !important;
-        color: whitesmoke !important;
-    }
+        color: whitesmoke !important;}
+        
 </style><div class="col-lg-3">
                 <nav class="navbar navbar-expand-lg bg-light mt-2">
                     <div class="container-fluid">
@@ -30,9 +30,7 @@
                                     </li> <li class="nav-item">
                                         <a class="nav-link ps-2 <?php echo (isset($_GET['x']) && $_GET['x']== 'user') ? 'active link-light' : 'link-dark' ;?>" href="user"> <i class="bi bi-clipboard2-heart-fill"></i> User</a>
                                     </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link ps-2 <?php echo (isset($_GET['x']) && $_GET['x']== 'notifikasi') ? 'active link-light' : 'link-dark' ;?>" href="notifikasi"> <i class="bi bi-app-indicator"></i> Notifikasi</a>
-                                    </li>
+                                    
                                     <li class="nav-item">
                                         <a class="nav-link ps-2 <?php echo (isset($_GET['x']) && $_GET['x']== 'report') ? 'active link-light' : 'link-dark' ;?>" href="report"><i class="bi bi-journal-bookmark-fill"></i> Report</a>
                                     </li>

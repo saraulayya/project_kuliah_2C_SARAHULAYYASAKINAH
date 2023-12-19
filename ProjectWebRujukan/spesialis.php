@@ -40,7 +40,7 @@ while ($record = mysqli_fetch_array($query)) {
                                     </div>
                                     <div class="col-lg-6">
                                         <div class="form-floating mb-3">
-                                            <input type="text" class="form-control" id="floatingInput" placeholder="Your Name" name="Spesialis" required>
+                                            <input type="text" class="form-control" id="floatingInput" placeholder="Your Name" name="spesialis" required>
                                             <label for="floatingInput">Spesialis</label>
                                             <div class="invalid-feedback">
                                                 Masukan Spesialis.
@@ -57,33 +57,33 @@ while ($record = mysqli_fetch_array($query)) {
                                         </div>
                                     </div>
                                 </div>
-                        <div class="col-lg-6">
-                            <div class="form-floating mb-3">
-                                <input type="number" class="form-control" id="floatingInput" placeholder="08xxxxxxxxx" name="no_asisten" required>
-                                <label for="floatingInput">No HP Asisten</label>
-                                <div class="invalid-feedback">
-                                    No HP Asisten
+                                <div class="col-lg-6">
+                                    <div class="form-floating mb-3">
+                                        <input type="number" class="form-control" id="floatingInput" placeholder="08xxxxxxxxx" name="no_asisten" required>
+                                        <label for="floatingInput">No HP Asisten</label>
+                                        <div class="invalid-feedback">
+                                            No HP Asisten
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-12">
-                            <div class="form-floating mb-3">
-                                <textarea class="form-control"  id="floatingInput" placeholder="penempatan" name="penempatan"></textarea>
-                                <label for="floatingInput">Penempatan</label>
-                                <div class="invalid-feedback">
-                                    Penempatan
+                                <div class="col-lg-12">
+                                    <div class="form-floating mb-3">
+                                        <input type="text" class="form-control" id="floatingInput" placeholder="Penempatan" name="penempatan" required>
+                                        <label for="floatingInput">Penempatan</label>
+                                        <div class="invalid-feedback">
+                                            Masukan Penempatan
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    <button type="submit" class="btn btn-primary" name="input_spesialis_validate" value="12345">Save changes</button>
+                                </div>
+                            </form>
                         </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="submit" class="btn btn-primary" name="input_pasien_validate" value="12345">Save changes</button>
-                        </div>
-                        </form>
                     </div>
                 </div>
             </div>
-        </div>
         </div>
         <!-- Akhir Modal Tambah User Baru-->
 
@@ -120,14 +120,14 @@ while ($record = mysqli_fetch_array($query)) {
                                         </div>
                                     </div>
                                 </div>
-                                
-                                    <div class="col-lg-8">
-                                        <div class="form-floating mb-3">
-                                            <input disabled type="number" class="form-control" id="floatingInput" placeholder="08xxxxxxxxx" name="no_asisten" value="<?php echo $row['no_asisten'] ?>">
-                                            <label for="floatingInput">No HP Asisten</label>
-                                        </div>
+
+                                <div class="col-lg-8">
+                                    <div class="form-floating mb-3">
+                                        <input disabled type="number" class="form-control" id="floatingInput" placeholder="08xxxxxxxxx" name="no_asisten" value="<?php echo $row['no_asisten'] ?>">
+                                        <label for="floatingInput">No HP Asisten</label>
                                     </div>
-                                
+                                </div>
+
                                 <div class="form-floating">
                                     <textarea disabled class="form-control" id="" name="penempatan"><?php echo $row['penempatan'] ?></textarea>
                                     <label for="floatingInput">Penempatan</label>
@@ -177,31 +177,31 @@ while ($record = mysqli_fetch_array($query)) {
                                         </div>
                                     </div>
                                 </div>
-                            
-                                    <div class="col-lg-8">
-                                        <div class="form-floating mb-3">
-                                            <input type="number" class="form-control" id="floatingInput" placeholder="08xxxxxxxxx" name="no_asisten" value="<?php echo $row['no_asisten'] ?>">
-                                            <label for="floatingInput">No Asisten</label>
-                                        </div>
+
+                                <div class="col-lg-8">
+                                    <div class="form-floating mb-3">
+                                        <input type="number" class="form-control" id="floatingInput" placeholder="08xxxxxxxxx" name="no_asisten" value="<?php echo $row['no_asisten'] ?>">
+                                        <label for="floatingInput">No Asisten</label>
                                     </div>
                                 </div>
-                                <div class="form-floating">
-                                    <textarea class="form-control" id="" name="Penempatan"><?php echo $row['penempatan'] ?></textarea>
-                                    <label for="floatingInput">Penempatan</label>
-                                </div>
-                                <div class="form-floating">
-                                    <textarea class="form-control" id="" name="jadwal_kerja"><?php echo $row['jadwal_kerja'] ?></textarea>
-                                    <label for="floatingInput">Jadwal Kerja</label>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                    <button type="submit" class="btn btn-primary" name="input_spesialis_validate" value="12345">Save changes</button>
-                                </div>
-                            </form>
                         </div>
+                        <div class="form-floating">
+                            <textarea class="form-control" id="" name="Penempatan"><?php echo $row['penempatan'] ?></textarea>
+                            <label for="floatingInput">Penempatan</label>
+                        </div>
+                        <div class="form-floating">
+                            <textarea class="form-control" id="" name="jadwal_kerja"><?php echo $row['jadwal_kerja'] ?></textarea>
+                            <label for="floatingInput">Jadwal Kerja</label>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-primary" name="input_spesialis_validate" value="12345">Save changes</button>
+                        </div>
+                        </form>
                     </div>
                 </div>
-            
+            </div>
+
             <!--Akhir Modal Edit-->
 
 
@@ -234,7 +234,6 @@ while ($record = mysqli_fetch_array($query)) {
                             <th scope="row"><?php echo $no++ ?></th>
                             <td><?php echo $row['nama_dokter'] ?></td>
                             <td><?php echo $row['spesialis'] ?></td>
-                            <td><?php echo $row['no_asisten'] ?></td>
                             <td><?php echo $row['penempatan'] ?></td>
                             <td><?php echo $row['jadwal_kerja'] ?></td>
                             <td class="d-flex">

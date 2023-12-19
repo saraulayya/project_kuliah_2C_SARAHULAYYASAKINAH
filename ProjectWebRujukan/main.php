@@ -1,6 +1,6 @@
 <?php
 // session_start();
-if (empty($_SESSION['nama_pasien'])) {
+if (empty($_SESSION['username_rujukan'])) {
     header('location:login');
 }
 include "prosses/connect.php";
