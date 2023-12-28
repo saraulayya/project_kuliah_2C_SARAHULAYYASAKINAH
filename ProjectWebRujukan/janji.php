@@ -34,7 +34,7 @@ while ($record = mysqli_fetch_array($query)) {
                                 <div class="col-lg-6">
                                         <div class="form-floating mb-3">
                                             <input type="text" class="form-control" id="floatingnojanji"
-                                             placeholder="no_janji" name="no_janji" required>
+                                            placeholder="no_janji" name="no_janji" required>
                                             <label for="floatingnojanji">No Janji</label>
                                             <div class="invalid-feedback">
                                                 Please choose a num of tabel.
@@ -44,7 +44,7 @@ while ($record = mysqli_fetch_array($query)) {
                                     <div class="col-lg-6">
                                         <div class="form-floating mb-3">
                                             <input type="text" class="form-control" id="floatingnamadokter"
-                                             placeholder="nama_dokter" name="nama_dokter" required>
+                                            placeholder="nama_dokter" name="nama_dokter" required>
                                             <label for="floatingnamadokter">Nama Dokter</label>
                                             <div class="invalid-feedback">
                                                 Please choose a num of tabel.
@@ -209,14 +209,14 @@ while ($record = mysqli_fetch_array($query)) {
                                 <td><?php echo $row['nama_dokter'] ?></td>
                                 <td><?php echo $row['spesialis'] ?></td>
                                 <td><?php echo $row['jadwal_temu'] ?></td>
-                                <td><?php echo $row['status'] ?></td>
+                                
                                 <td>
                                     <div class="d-flex">
 
                                         <a class="btn btn-info btn-sm me-1" href="./?x=orderitem&order=<?php echo $row['no_janji']."&nama_pasien=".$row['nama_pasien']."&nama_dokter=".$row['nama_dokter'] ?>"><i class="bi bi-eye"></i></a>
 
-                                        <button class="<?php echo (!empty($row['no_janji'])) ? "btn btn-secondary btn-sm me-1 disabled" : "btn btn-warning btn-sm me-1" ; ?>" data-bs-toggle="modal" data-bs-target="#ModalEdit<?php echo $row['no_janji'] ?>"><i class="bi bi-pencil-square"></i></button>
-                                        <button class="<?php echo (!empty($row['no_janji'])) ? "btn btn-secondary btn-sm me-1 disabled" : "btn btn-danger btn-sm me-1" ; ?>" data-bs-toggle="modal" data-bs-target="#ModalDelete<?php echo $row['no_janji'] ?>"><i class="bi bi-trash"></i></button>
+                                        <button class="btn btn-warning btn-sm me-1" data-bs-toggle="modal" data-bs-target="#ModalEdit<?php echo $row['no_janji'] ?>"><i class="bi bi-pencil-square"></i></button>
+                                        <button class="btn btn-danger btn-sm me-1" data-bs-toggle="modal" data-bs-target="#ModalDelete<?php echo $row['no_janji'] ?>"><i class="bi bi-trash"></i></button>
                                     </div>
                                 </td>
                             </tr>

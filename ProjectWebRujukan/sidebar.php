@@ -31,9 +31,6 @@
                                         <a class="nav-link ps-2 <?php echo (isset($_GET['x']) && $_GET['x']== 'user') ? 'active link-light' : 'link-dark' ;?>" href="user"> <i class="bi bi-clipboard2-heart-fill"></i> User</a>
                                     </li>
                                     
-                                    <li class="nav-item">
-                                        <a class="nav-link ps-2 <?php echo (isset($_GET['x']) && $_GET['x']== 'report') ? 'active link-light' : 'link-dark' ;?>" href="report"><i class="bi bi-journal-bookmark-fill"></i> Report</a>
-                                    </li>
                                 </ul>
                             </div>
                         </div>

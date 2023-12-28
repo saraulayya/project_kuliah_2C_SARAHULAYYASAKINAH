@@ -45,8 +45,8 @@ include "prosses/connect.php";
     <!-- Awal Judul-->
     <div class="card mt-4 border-0 bg-light">
         <div class="card-body text-center">
-            <h5 class="card-title">DECAFE - APLIKASI PEMESANAN MAKANAN DAN MINUMAN CAFE</h5>
-            <p class="card-text">Aplikasi Pemesanan Makanan Dan Minuman Yang Mudah dan Praktis. Nikmati Berbagai Menu Makanan dan Minuman Favorit Anda Dengan Beberapa Klik. Pesan, Bayar, Dan Lacak Pesanan Anda Dengan Mudah Melalui Aplikasi Ini.
+            <h5 class="card-title">MOBILE REFERENCE - APLIKASI RUJUKAN ONLINE</h5>
+            <p class="card-text">Aplikasi Rujukan Online Yang Mudah dan Praktis.
             </p>
             <a href="janji" class="btn btn-primary">Buat Janji</a>
         </div>

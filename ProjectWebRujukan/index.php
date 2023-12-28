@@ -35,11 +35,7 @@
                             }else if (isset($_GET['x']) && $_GET['x']== 'notifikasi'){
                             include "notifikasi.php";
                             }
-                            else if (isset($_GET['x']) && $_GET['x']== 'report'){
-                                include "report.php";
-                                } else{
-                                    include "home.php";
-                                }
+
         ?>
         <!-- tutup content -->
     </div>

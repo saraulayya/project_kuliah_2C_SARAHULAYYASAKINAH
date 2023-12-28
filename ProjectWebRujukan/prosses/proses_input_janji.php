@@ -2,10 +2,11 @@
 session_start();
 include "connect.php";
 $no_janji = (isset($_POST['no_janji'])) ? htmlentities($_POST['no_janji']) : "";
+$nama_pasien = (isset($_POST['nama_pasien'])) ? htmlentities($_POST['nama_pasien']) : "";
 $nama_dokter = (isset($_POST['nama_dokter'])) ? htmlentities($_POST['nama_dokter']) : "";
 $spesialis = (isset($_POST['spesialis'])) ? htmlentities($_POST['spesialis']) : "";
 $jadwal_temu = (isset($_POST['jadwal_temu'])) ? htmlentities($_POST['jadwal_temu']) : "";
-$nama_pasien = (isset($_POST['nama_pasien'])) ? htmlentities($_POST['nama_pasien']) : "";
+
 $proses_input_janji_validate = isset($_POST['input_janji_validate']);
 
 $message = "";
@@ -16,8 +17,8 @@ if ($proses_input_janji_validate) {
         $message = '<script>alert("Order Yang Dimasukan Telah Ada");
                         window.location="../janji"</script>';
     } else {
-        $query = mysqli_query($conn, "INSERT INTO tb_janji (no_janji,nama_dokter,spesialis,jadwal_temu,nama_pasien) 
-        value ('$no_janji','$nama_dokter','$spesialis','$jadwal_temu','$nama_pasien')");
+        $query = mysqli_query($conn, "INSERT INTO tb_janji (no_janji,nama_pasien,nama_dokter,spesialis,jadwal_temu) 
+        value ('$no_janji','$nama_pasien','$nama_dokter','$spesialis','$jadwal_temu')");
         
 
         if ($query) {
